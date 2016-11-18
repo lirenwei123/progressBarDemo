@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  progressController.m
 //  progressBarDemo
 //
 //  Created by rwli on 16/11/18.
@@ -7,8 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "progress.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet progress *proressview;
+
+@property (weak, nonatomic) IBOutlet UILabel *lable;
 
 @end
 
@@ -16,7 +21,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   
+}
+
+
+- (IBAction)valuechange:(UISlider *)sender {
+    [self.proressview setProgress:sender.value];
+    self.lable.text =[NSString stringWithFormat:@"%.2f%%",sender.value*100];
+ 
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,5 +1,5 @@
 //
-//  progressController.h
+//  progress.h
 //  progressBarDemo
 //
 //  Created by rwli on 16/11/18.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-
+@interface progress : UIView
+@property (assign,nonatomic)CGFloat progress;
 @end
-
